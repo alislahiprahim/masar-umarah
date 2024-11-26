@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { StatisticsBarComponent } from '../../components/statistics-bar/statistics-bar.component';
 import { SpecialPackagesComponent } from './special-packages/special-packages.component';
 import { SpecialGallaryComponent } from './special-gallary/special-gallary.component';
+import { CustomerReviewsComponent } from './customer-reviews/customer-reviews.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { SpecialGallaryComponent } from './special-gallary/special-gallary.compo
     StatisticsBarComponent,
     SpecialPackagesComponent,
     SpecialGallaryComponent,
+    CustomerReviewsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

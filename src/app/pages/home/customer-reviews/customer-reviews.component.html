@@ -1,0 +1,24 @@
+<!-- reviews-slider.component.html -->
+<section class="py-14 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+
+        <swiper-container #swiperContainer [config]="swiperConfig" class="w-full">
+            <swiper-slide *ngFor="let review of reviews" class="p-4 py-10">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img [src]="review.avatar" alt="{{ review.name }}" class="w-20 h-20 rounded-full mb-4 object-cover border-4 border-blue-100">
+                    <h3 class="font-semibold text-lg mb-1">{{ review.name }}</h3>
+
+                    <div class="text-yellow-400 mb-3">
+                        <span *ngFor="let star of renderStars(review.rating)" class="text-xl">
+              {{ star }}
+            </span>
+                    </div>
+
+                    <p class="text-gray-600 italic mb-2">"{{ review.text }}"</p>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+
+    </div>
+</section>

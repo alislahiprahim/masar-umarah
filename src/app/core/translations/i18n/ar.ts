@@ -18,6 +18,7 @@ export const Arabic = {
     HERO_SECTION_DESCRIPTION:
       'نقدم لك باقات متنوعة لرحلات الحج والعمرة، مصممة خصيصًا لتلبية احتياجاتك وتوفير تجربة روحانية لا تُنسى. احجز رحلتك الآن واستعد للعيش في أجواء الطمأنينة والإيمان.',
     GALLERY_SECTION_TITLE: 'معرض الصور',
+    CUSTOMER_REVIEWS_SECTION_TITLE: 'اراء العملاء',
   },
   BUTTON: {
     HERO_SECTION_BUTTON: 'استكشف الرحلات',
