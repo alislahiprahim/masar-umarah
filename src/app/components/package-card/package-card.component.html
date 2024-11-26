@@ -46,9 +46,10 @@
             <button (click)="onBookNowClick()" class="flex-1 btn btn-md btn-primary">
             {{"BUTTON.BOOK_NOW" | translate}}
           </button>
-            <button (click)="onDetailsClick()" class="flex-1 btn btn-md btn-outline btn-primary">
-      {{'BUTTON.VIEW_DETAILS' | translate}}
-    </button>
+            <app-modal [modalActionOpen]="{title:('BUTTON.VIEW_DETAILS' | translate), styling: 'flex-1 btn btn-md btn-outline btn-primary'}">
+                package details component
+            </app-modal>
+
         </div>
     </div>
 </div>

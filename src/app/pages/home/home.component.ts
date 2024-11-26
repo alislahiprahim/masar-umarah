@@ -4,11 +4,17 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
 import { StatisticsBarComponent } from '../../components/statistics-bar/statistics-bar.component';
 import { SpecialPackagesComponent } from './special-packages/special-packages.component';
+import { SpecialGallaryComponent } from './special-gallary/special-gallary.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TranslateModule, StatisticsBarComponent, SpecialPackagesComponent],
+  imports: [
+    TranslateModule,
+    StatisticsBarComponent,
+    SpecialPackagesComponent,
+    SpecialGallaryComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

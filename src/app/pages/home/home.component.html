@@ -4,9 +4,9 @@
             <!-- Loading Image -->
 
             <video autoplay muted loop playsinline class="hero-video">
-      <source src="assets/images/Videoplayback.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+        <source src="assets/images/Videoplayback.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
         </div>
         <div class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-br from-[#00322FE6] to-[#1B7D7599]"></div>
 
@@ -14,8 +14,8 @@
         <div class="container mx-auto relative z-10 h-full flex items-end justify-center md:justify-between px-20 text-white flex-col md:flex-row">
             <div class="text-center md:text-right h-full flex flex-col justify-center md:order-1 md:flex-1 items-center md:items-start">
                 <span class="block mb-2">{{
-        "HOME.HERO_SECTION_SMALL_TITLE" | translate
-      }}</span>
+          "HOME.HERO_SECTION_SMALL_TITLE" | translate
+        }}</span>
                 <h1 class="text-3xl md:text-5xl mb-4 font-bold">
                     {{ "HOME.HERO_SECTION_TITLE" | translate }}
                 </h1>
@@ -23,8 +23,8 @@
                     {{ "HOME.HERO_SECTION_DESCRIPTION" | translate }}
                 </p>
                 <button class="btn btn-accent hover:btn-primary">
-        {{ "BUTTON.HERO_SECTION_BUTTON" | translate }}
-      </button>
+          {{ "BUTTON.HERO_SECTION_BUTTON" | translate }}
+        </button>
             </div>
             <div class="flex-1 hidden md:flex justify-center items-center md:order-2 rounded-oval-x">
                 <img src="assets/images/hero-img.png" alt="Hero Image" class="max-w-full h-auto" />
@@ -34,4 +34,12 @@
     <app-statistics-bar class="absolute bottom-[-100px] left-0 w-full z-20" />
 </section>
 <div class="my-20"></div>
-<app-special-packages/>
+@defer (on viewport) {
+<app-special-packages /> } @placeholder {
+<div>Special packages section loading...</div>
+}
+<div class="my-20"></div>
+@defer (on viewport) {
+<app-special-gallary /> } @placeholder {
+<div>Gallary section loading...</div>
+}

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ModalComponent } from '../modal/modal.component';
 export interface PackageCardData {
   id: number;
   image: string;
@@ -14,7 +15,7 @@ export interface PackageCardData {
 @Component({
   selector: 'app-package-card',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, ModalComponent],
   templateUrl: './package-card.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [

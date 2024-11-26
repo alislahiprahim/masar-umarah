@@ -1,0 +1,13 @@
+<section class="gallery-section py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">{{'HOME.GALLERY_SECTION_TITLE' | translate}}</h2>
+        <div class="columns-2 sm:columns-3 md:columns-4 gap-4 space-y-4">
+            <div class="break-inside-avoid overflow-hidden rounded-lg shadow-md group relative" *ngFor="let image of trips">
+                <img [src]="image.imageUrl" [alt]="image.alt" Placeholder="https://placehold.co/600x400" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">{{ image.caption }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
