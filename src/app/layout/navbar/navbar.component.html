@@ -1,0 +1,70 @@
+<nav class="bg-base-100 shadow-lg">
+    <div class="navbar max-w-7xl mx-auto px-4">
+        <!-- Logo Section -->
+        <div class="flex-1">
+            <a class="text-xl btn btn-ghost hover:bg-transparent ">
+                <img src="assets/logos/ka3baa.png" alt="Logo" class="h-8 w-8 mr-2" /> YourBrand
+            </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="flex-none hidden lg:flex gap-2">
+            <!-- Navigation Links -->
+            <ul class="menu menu-horizontal px-1">
+                <li *ngFor="let link of links">
+                    <a [routerLink]="link.route" class="text-base-content hover:text-primary">
+            {{ link.name | translate }}
+          </a>
+                </li>
+            </ul>
+
+            <!-- Desktop Search -->
+            <app-mini-search viewPort="web" />
+
+            <!-- User Profile -->
+            <app-user-profile viewPort="web" />
+
+            <!-- Register and Login -->
+            <app-register-login-header/>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex-none lg:hidden">
+            <button class="btn btn-square btn-ghost" (click)="toggleMobileMenu()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="inline-block w-5 h-5 stroke-current"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div *ngIf="isMobileMenuOpen" class="lg:hidden absolute top-16 left-0 right-0 bg-base-100 shadow-lg p-4 flex flex-row">
+            <!-- Mobile Search -->
+            <!-- <app-mini-search viewPort="mobile" /> -->
+            <!-- Mobile Navigation Links -->
+            <ul class="menu w-full">
+                <li *ngFor="let link of links">
+                    <a [routerLink]="link.route" (click)="closeMobileMenu()" class="text-base-content hover:text-primary py-2">
+            {{ link.name | translate }}
+          </a>
+                </li>
+                <!-- Register and Login -->
+                <app-register-login-header/>
+                <app-user-profile viewPort="mobile" />
+            </ul>
+
+
+
+        </div>
+    </div>
+</nav>

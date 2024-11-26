@@ -1,0 +1,35 @@
+<section class="relative w-full h-[80vh]">
+    <div class="relative w-full h-full overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-full z-10 overflow-hidden">
+            <!-- Loading Image -->
+
+            <video autoplay muted loop playsinline class="hero-video">
+      <source src="assets/images/Videoplayback.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-br from-[#00322FE6] to-[#1B7D7599]"></div>
+
+        <!-- Content -->
+        <div class="container mx-auto relative z-10 h-full flex items-end justify-center md:justify-between px-20 text-white flex-col md:flex-row">
+            <div class="text-center md:text-right h-full flex flex-col justify-center md:order-1 md:flex-1 items-center md:items-start">
+                <span class="block mb-2">{{
+        "HOME.HERO_SECTION_SMALL_TITLE" | translate
+      }}</span>
+                <h1 class="text-3xl md:text-5xl mb-4 font-bold">
+                    {{ "HOME.HERO_SECTION_TITLE" | translate }}
+                </h1>
+                <p class="text-lg md:text-2xl mb-8 opacity-90">
+                    {{ "HOME.HERO_SECTION_DESCRIPTION" | translate }}
+                </p>
+                <button class="btn btn-accent hover:btn-primary">
+        {{ "HOME.DISCOVER_TRIPS" | translate }}
+      </button>
+            </div>
+            <div class="flex-1 hidden md:flex justify-center items-center md:order-2 rounded-oval-x">
+                <img src="assets/images/hero-img.png" alt="Hero Image" class="max-w-full h-auto" />
+            </div>
+        </div>
+    </div>
+    <app-statistics-bar class="absolute bottom-[-100px] left-0 w-full z-20" />
+</section>

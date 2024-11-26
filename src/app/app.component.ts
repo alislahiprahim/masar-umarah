@@ -1,14 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { LanguageService } from './core/translations/language.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [NavbarComponent, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers: [LanguageService],
 })
-export class AppComponent {
-  title = 'masar-umarah';
+export class AppComponent implements OnInit {
+  #languageService = inject(LanguageService);
+  toggleTheme() {
+    const html = document.querySelector('html');
+    const currentTheme = html?.getAttribute('data-theme');
+    html?.setAttribute(
+      'data-theme',
+      currentTheme === 'lightCustom' ? 'darkCustom' : 'lightCustom'
+    );
+  }
+  ngOnInit(): void {
+    this.#languageService.setLanguage('ar');
+  }
 }
