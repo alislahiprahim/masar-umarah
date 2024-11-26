@@ -3,11 +3,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
 import { StatisticsBarComponent } from '../../components/statistics-bar/statistics-bar.component';
+import { SpecialPackagesComponent } from './special-packages/special-packages.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TranslateModule, StatisticsBarComponent],
+  imports: [TranslateModule, StatisticsBarComponent, SpecialPackagesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

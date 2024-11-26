@@ -1,7 +1,6 @@
 export const Arabic = {
   TRIPS: 'الرحلات',
   ABOUT_US: 'من نحن',
-  LOGIN: 'تسجيل الدخول',
   REGISTER: 'التسجيل',
   SETTINGS: 'الاعدادات',
   LOGOUT: 'تسجيل الخروج',
@@ -18,6 +17,11 @@ export const Arabic = {
     HERO_SECTION_TITLE: 'اكتشف أجواء الحج والعمرة بخدمات استثنائية',
     HERO_SECTION_DESCRIPTION:
       'نقدم لك باقات متنوعة لرحلات الحج والعمرة، مصممة خصيصًا لتلبية احتياجاتك وتوفير تجربة روحانية لا تُنسى. احجز رحلتك الآن واستعد للعيش في أجواء الطمأنينة والإيمان.',
-    DISCOVER_TRIPS: 'استكشف الرحلات',
+  },
+  BUTTON: {
+    HERO_SECTION_BUTTON: 'استكشف الرحلات',
+    LOGIN: 'تسجيل الدخول',
+    BOOK_NOW: 'حجز الآن',
+    VIEW_DETAILS: 'اظهار التفاصيل',
   },
 };

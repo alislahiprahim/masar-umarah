@@ -9,10 +9,10 @@ import { TranslateModule } from '@ngx-translate/core';
     <!-- Desktop Auth Buttons -->
     <div class=" lg:flex items-center gap-2">
       <button
-        class="btn btn-sm btn-accent hover:btn-primary"
+        class="btn btn-md btn-accent hover:btn-primary"
         (click)="openLoginModal()"
       >
-        {{ 'LOGIN' | translate }}
+        {{ 'BUTTON.LOGIN' | translate }}
       </button>
       <!-- <button class="btn btn-sm btn-primary" (click)="openRegisterModal()">
         {{ 'REGISTER' | translate }}
